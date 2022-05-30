@@ -1,0 +1,40 @@
+<ion-card>
+  <ion-card-header>
+  <h1>
+	What Animal You Are?
+	<form style="text-align: center">
+		<ion-select [formControl]="animal" placeholder="">
+			<ion-select-option *ngFor="let animal of animals" [value]="animal">
+				{{animal}}
+			</ion-select-option>
+		</ion-select>
+	</form>
+</h1>
+
+</ion-card-header>
+<ion-card-content>
+<form class="form" [formGroup]="form">
+	<ion-card *ngFor="let group of form.controls" [formGroup]="group" [style.background-image]="group.get('color').value">
+    <ion-card-header>
+		<h2 class="animal">
+			{{ group.get('animal').value }} {{ group.get('name').value }}
+		</h2>
+    </ion-card-header>
+		<ion-item >
+			<ion-input  placeholder="Animal" formControlName="animal"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input  placeholder="Name" formControlName="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select formControlName="color" placeholder="Color" >
+        <ion-select-option *ngFor="let color of colors" [value]="color.color" [style.background]="color.color"
+          style="color: white">
+          {{ color.name }}
+        </ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-card>
+</form>
+</ion-card-content>
+</ion-card>

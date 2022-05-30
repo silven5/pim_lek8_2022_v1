@@ -1,0 +1,44 @@
+<ion-card>
+    <ion-card-header>
+       <h2>Приклад 5</h2> 
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="skillsForm" (ngSubmit)="onSubmit()">
+<ion-item>
+    <ion-label>Герой</ion-label>
+    <ion-input  type="text" formControlName="hero"></ion-input>
+</ion-item>
+<ion-card formArrayName="skills">
+  <ion-card-header>
+    <h2>Вміння</h2>
+  </ion-card-header>
+  
+<ion-item *ngFor="let skill of skillsForm.controls.skills.controls; let i = index">
+  <ion-input  type="text" formControlName={{i}}></ion-input> 
+  <ion-button color="tertiary"(click)="deleteSkill(i)">
+  <ion-icon slot="start" name="trash"></ion-icon>
+  Видалити
+</ion-button>
+</ion-item>
+  <ion-button color="tertiary" (click)="addSkill()">
+  <ion-icon slot="start" name="add"></ion-icon>
+  Додати вміння
+</ion-button>
+</ion-card>
+<ion-button type="submit"  color="my-color" expand="block" fill="outline" >Відправити</ion-button>
+</form>
+<ion-item>
+  <ion-label>
+    Герой:  {{skillsForm.value.hero}}
+  </ion-label>
+  </ion-item>
+    <ion-label>
+        <h3>Вміння:</h3> 
+    </ion-label>
+    <ion-item *ngFor="let item of skillsForm.value.skills">
+{{item}}
+    </ion-item>
+
+
+</ion-card-content>
+</ion-card>

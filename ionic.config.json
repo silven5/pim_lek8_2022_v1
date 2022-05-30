@@ -1,0 +1,7 @@
+{
+  "name": "pim_lek8_2022_v1",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

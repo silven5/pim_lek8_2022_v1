@@ -1,0 +1,56 @@
+*, html{
+  padding: 0;
+  margin: 0;
+}
+#main{
+		position: relative;
+		width: 100%;
+		height: 20vh;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		perspective: 900;
+		-webkit-perspective: 900;
+	 	
+		background: linear-gradient(124deg, #fdb93a, #013c57, #711d43, #3f285d, #bd00e3, #570036);
+		background-size: 1800% 1800%;
+
+		-webkit-animation: rainbow 15s ease infinite;
+		-z-animation: rainbow 15s ease infinite;
+		-o-animation: rainbow 15s ease infinite;
+		  animation: rainbow 15s ease infinite;}
+
+		@-webkit-keyframes rainbow {
+		    0%{background-position:0% 60%}
+		    50%{background-position:100% 20%}
+		    100%{background-position:0% 80%}
+		}
+		@-moz-keyframes rainbow {
+		   0%{background-position:0% 60%}
+		    50%{background-position:100% 20%}
+		    100%{background-position:0% 80%}
+		}
+		@-o-keyframes rainbow {
+		  0%{background-position:0% 60%}
+		    50%{background-position:100% 20%}
+		    100%{background-position:0% 80%}
+		}
+		@keyframes rainbow { 
+		   0%{background-position:0% 60%}
+		    50%{background-position:100% 20%}
+		    100%{background-position:0% 80%}
+		}
+	
+	.box{
+		width: 100px;
+		height: 100px;
+		background: red;
+		display: inline-block;
+	}
+	svg{
+		display: block;
+		margin: auto;
+		width: auto;
+	}
+	svg:not(:root){
+		overflow: visible !important;
+	}

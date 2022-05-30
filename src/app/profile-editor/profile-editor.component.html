@@ -1,0 +1,40 @@
+
+<form [formGroup]="profileForm" novalidate (ngSubmit)="onSubmit()">
+<ion-item>
+  <ion-label for="first-name">First Name: </ion-label>
+  <ion-input id="first-name" type="text" formControlName="firstName"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label for="last-name">Last Name: </ion-label>
+  <ion-input id="last-name" type="text" formControlName="lastName"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label for="login">Login: </ion-label>
+  <ion-input id="login" type="text" formControlName="Login"></ion-input>
+</ion-item>
+<ion-card formGroupName="address">
+  <ion-card-header>
+  <h2>Address</h2>
+</ion-card-header>
+<ion-card-content>
+  <ion-item>
+  <ion-label for="street">Street: </ion-label>
+  <ion-input id="street" type="text" formControlName="street"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label for="city">City: </ion-label>
+  <ion-input id="city" type="text" formControlName="city"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label for="state">State: </ion-label>
+  <ion-input id="state" type="text" formControlName="state"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label for="zip">Zip Code: </ion-label>
+  <ion-input id="zip" type="text" formControlName="zip"></ion-input>
+  </ion-item>
+  </ion-card-content>
+</ion-card>
+<ion-button type="submit" color="my-color" expand="block" fill="outline" [disabled]="!profileForm.valid">Submit</ion-button>
+
+</form>
