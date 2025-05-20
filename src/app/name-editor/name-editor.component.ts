@@ -7,13 +7,11 @@ import { FormControl } from '@angular/forms';
 })
 export class NameEditorComponent implements OnInit {
   //Приклад 1
-name = new FormControl('Olena'); 
-  constructor() { }
+  name = new FormControl('Olena');
+  constructor() {}
   //Приклад2
-  updateName(name: string)
-  {
+  updateName(name) {
     this.name.setValue(name);
   }
   ngOnInit() {}
-
 }

@@ -15,7 +15,7 @@ export class ControlLinkerService<T extends AbstractControl = AbstractControl>{
     const [control] = Array.from(this.links);
     return control.value;
   }
-//Региструємо інші AbstractControl та підписуємося на їх зміни
+//Реєструємо інші AbstractControl та підписуємося на їх зміни
   public link(control: T): void {
     const subscription = control.valueChanges.subscribe(
       (value) => this.patchValue(value, { emitEvent: false })

@@ -1,43 +1,46 @@
 <ion-header>
- 
-<app-fox-header></app-fox-header>
+  <app-fox-header></app-fox-header>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-<ion-card class="card">
-        <ion-card-header>
-
-            <ion-card-title>
-                <h1> Приклад 1. </h1>
-
-            </ion-card-title>
-
-        </ion-card-header>
-        <ion-card-content>
-          <form [formGroup]="form"> 
-            <div *ngFor="let group of form.controls" [formGroup]="group">
-<ion-item >
-              <ion-label >Тварина</ion-label>
-              <ion-select placeholder="Оберіть тварину" formControlName="animal" class="animal-list">
-                <ion-select-option value="cat">Кішка</ion-select-option>
-                <ion-select-option value="dog">Собака</ion-select-option>
-              </ion-select>
-            </ion-item>
-            <ion-item>
-              <ion-label>Ім'я</ion-label>
-              <ion-input type="text" formControlName="name"></ion-input>
-            </ion-item>
-             <ion-item>
-              <ion-label>Колір</ion-label>
-              <ion-select placeholder="Оберіть колір" formControlName="color" class="animal-list">
-                <ion-select-option value="black">Білий</ion-select-option>
-                <ion-select-option value="white">Чорний</ion-select-option>
-                </ion-select>
-            </ion-item>
-            </div>
-
-          </form>
-        </ion-card-content>
+  <ion-card class="card">
+    <ion-card-header>
+      <ion-card-title>
+        <h1>Приклад 1.</h1>
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <form [formGroup]="animalForm">
+        <div *ngFor="let group of form.controls" [formGroup]="group">
+          <ion-item>
+            <ion-label>Тварина</ion-label>
+            <ion-select
+              placeholder="Оберіть тварину"
+              formControlName="animal"
+              class="animal-list"
+            >
+              <ion-select-option value="cat">Кішка</ion-select-option>
+              <ion-select-option value="dog">Собака</ion-select-option>
+            </ion-select>
+          </ion-item>
+          <ion-item>
+            <ion-label>Ім'я</ion-label>
+            <ion-input type="text" formControlName="name"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label>Колір</ion-label>
+            <ion-select
+              placeholder="Оберіть колір"
+              formControlName="color"
+              class="animal-list"
+            >
+              <ion-select-option value="black">Білий</ion-select-option>
+              <ion-select-option value="white">Чорний</ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+      </form>
+    </ion-card-content>
   </ion-card>
   <app-animal-editor></app-animal-editor>
 </ion-content>

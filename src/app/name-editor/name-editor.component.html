@@ -1,28 +1,32 @@
 <ion-card>
-    <ion-card-header>
-       <h2>Приклад 1</h2> 
-    </ion-card-header>
-    <ion-card-content>
-<ion-item>
-    <ion-label>Name</ion-label>
-    <ion-input  type="text" [formControl]="name"></ion-input>
-</ion-item>
-<ion-item>
-    <ion-label>
-        Value: {{ name.value }}
-    </ion-label>
-</ion-item> 
-</ion-card-content>
+  <ion-card-header>
+    <h2>Приклад 1</h2>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label>Name</ion-label>
+      <ion-input type="text" [formControl]="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label> Value: {{ name.value }} </ion-label>
+    </ion-item>
+  </ion-card-content>
 </ion-card>
 <ion-card>
-     <ion-card-header>
-       <h2>Приклад 2</h2> 
-    </ion-card-header>
-    <ion-card-content>
-        <ion-item>
-         <ion-label>New Name</ion-label>
-    <ion-input  type="text" #name1></ion-input>
-    <ion-button (click)="updateName(name1.value)" color="tertiary" expand="block" fill="outline">New Name</ion-button>
-</ion-item>
-        </ion-card-content>
+  <ion-card-header>
+    <h2>Приклад 2</h2>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label>New Name</ion-label>
+      <ion-input type="text" #name1></ion-input>
+      <ion-button
+        (click)="updateName(name1.value)"
+        color="tertiary"
+        expand="block"
+        fill="outline"
+        >New Name</ion-button
+      >
+    </ion-item>
+  </ion-card-content>
 </ion-card>
